@@ -1,0 +1,6 @@
+Dot/
+xcuserdata/
+buddy*/
+env/
+
+.DS_Store
