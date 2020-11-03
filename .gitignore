@@ -1,6 +1,8 @@
-Dot/
 xcuserdata/
 buddy*/
 env/
+
+Dot/*
+!Dot/.gitkeep
 
 .DS_Store
