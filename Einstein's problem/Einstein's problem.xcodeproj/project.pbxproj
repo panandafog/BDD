@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B6C8CD425517F7D002D5395 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B6C8CD325517F7D002D5395 /* main.cpp */; };
-		0B6C8CE12551807E002D5395 /* bdd.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6C8CDF2551807E002D5395 /* bdd.h */; };
-		0B6C8CE22551807E002D5395 /* libbdd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B6C8CE02551807E002D5395 /* libbdd.a */; };
+		0B0D40B42552D04E003136EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D40B32552D04E003136EF /* main.cpp */; };
+		0B0D40BF2552D0E9003136EF /* bdd.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0D40BD2552D0E9003136EF /* bdd.h */; };
+		0B0D40C02552D0E9003136EF /* libbdd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0D40BE2552D0E9003136EF /* libbdd.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0B6C8CCE25517F7D002D5395 /* CopyFiles */ = {
+		0B0D40AE2552D04E003136EF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,55 +25,55 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B6C8CD025517F7D002D5395 /* BDD */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = BDD; sourceTree = BUILT_PRODUCTS_DIR; };
-		0B6C8CD325517F7D002D5395 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		0B6C8CDF2551807E002D5395 /* bdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bdd.h; path = ../../../../../usr/local/lib/bdd.h; sourceTree = "<group>"; };
-		0B6C8CE02551807E002D5395 /* libbdd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbdd.a; path = ../../../../../usr/local/lib/libbdd.a; sourceTree = "<group>"; };
+		0B0D40B02552D04E003136EF /* Einstein's problem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Einstein's problem"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0B0D40B32552D04E003136EF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		0B0D40BD2552D0E9003136EF /* bdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bdd.h; path = ../../../../../usr/local/lib/bdd.h; sourceTree = "<group>"; };
+		0B0D40BE2552D0E9003136EF /* libbdd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbdd.a; path = ../../../../../usr/local/lib/libbdd.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0B6C8CCD25517F7D002D5395 /* Frameworks */ = {
+		0B0D40AD2552D04E003136EF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B6C8CE12551807E002D5395 /* bdd.h in Frameworks */,
-				0B6C8CE22551807E002D5395 /* libbdd.a in Frameworks */,
+				0B0D40BF2552D0E9003136EF /* bdd.h in Frameworks */,
+				0B0D40C02552D0E9003136EF /* libbdd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0B6C8CC725517F7D002D5395 = {
+		0B0D40A72552D04E003136EF = {
 			isa = PBXGroup;
 			children = (
-				0B6C8CD225517F7D002D5395 /* BDD */,
-				0B6C8CD125517F7D002D5395 /* Products */,
-				0B6C8CDB25517FF1002D5395 /* Frameworks */,
+				0B0D40B22552D04E003136EF /* Einstein's problem */,
+				0B0D40B12552D04E003136EF /* Products */,
+				0B0D40BC2552D0E9003136EF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
-		0B6C8CD125517F7D002D5395 /* Products */ = {
+		0B0D40B12552D04E003136EF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0B6C8CD025517F7D002D5395 /* BDD */,
+				0B0D40B02552D04E003136EF /* Einstein's problem */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0B6C8CD225517F7D002D5395 /* BDD */ = {
+		0B0D40B22552D04E003136EF /* Einstein's problem */ = {
 			isa = PBXGroup;
 			children = (
-				0B6C8CD325517F7D002D5395 /* main.cpp */,
+				0B0D40B32552D04E003136EF /* main.cpp */,
 			);
-			path = BDD;
+			path = "Einstein's problem";
 			sourceTree = "<group>";
 		};
-		0B6C8CDB25517FF1002D5395 /* Frameworks */ = {
+		0B0D40BC2552D0E9003136EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B6C8CDF2551807E002D5395 /* bdd.h */,
-				0B6C8CE02551807E002D5395 /* libbdd.a */,
+				0B0D40BD2552D0E9003136EF /* bdd.h */,
+				0B0D40BE2552D0E9003136EF /* libbdd.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -81,37 +81,37 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0B6C8CCF25517F7D002D5395 /* BDD */ = {
+		0B0D40AF2552D04E003136EF /* Einstein's problem */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0B6C8CD725517F7D002D5395 /* Build configuration list for PBXNativeTarget "BDD" */;
+			buildConfigurationList = 0B0D40B72552D04E003136EF /* Build configuration list for PBXNativeTarget "Einstein's problem" */;
 			buildPhases = (
-				0B6C8CCC25517F7D002D5395 /* Sources */,
-				0B6C8CCD25517F7D002D5395 /* Frameworks */,
-				0B6C8CCE25517F7D002D5395 /* CopyFiles */,
+				0B0D40AC2552D04E003136EF /* Sources */,
+				0B0D40AD2552D04E003136EF /* Frameworks */,
+				0B0D40AE2552D04E003136EF /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BDD;
-			productName = BDD;
-			productReference = 0B6C8CD025517F7D002D5395 /* BDD */;
+			name = "Einstein's problem";
+			productName = "Einstein's problem";
+			productReference = 0B0D40B02552D04E003136EF /* Einstein's problem */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0B6C8CC825517F7D002D5395 /* Project object */ = {
+		0B0D40A82552D04E003136EF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
-					0B6C8CCF25517F7D002D5395 = {
+					0B0D40AF2552D04E003136EF = {
 						CreatedOnToolsVersion = 12.1;
 					};
 				};
 			};
-			buildConfigurationList = 0B6C8CCB25517F7D002D5395 /* Build configuration list for PBXProject "BDD" */;
+			buildConfigurationList = 0B0D40AB2552D04E003136EF /* Build configuration list for PBXProject "Einstein's problem" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,29 +119,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 0B6C8CC725517F7D002D5395;
-			productRefGroup = 0B6C8CD125517F7D002D5395 /* Products */;
+			mainGroup = 0B0D40A72552D04E003136EF;
+			productRefGroup = 0B0D40B12552D04E003136EF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B6C8CCF25517F7D002D5395 /* BDD */,
+				0B0D40AF2552D04E003136EF /* Einstein's problem */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0B6C8CCC25517F7D002D5395 /* Sources */ = {
+		0B0D40AC2552D04E003136EF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B6C8CD425517F7D002D5395 /* main.cpp in Sources */,
+				0B0D40B42552D04E003136EF /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0B6C8CD525517F7D002D5395 /* Debug */ = {
+		0B0D40B52552D04E003136EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -200,7 +200,7 @@
 			};
 			name = Debug;
 		};
-		0B6C8CD625517F7D002D5395 /* Release */ = {
+		0B0D40B62552D04E003136EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -252,29 +252,29 @@
 			};
 			name = Release;
 		};
-		0B6C8CD825517F7D002D5395 /* Debug */ = {
+		0B0D40B82552D04E003136EF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HG9ZBM8AV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/include,
 					/usr/local/lib,
+					/usr/local/include,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		0B6C8CD925517F7D002D5395 /* Release */ = {
+		0B0D40B92552D04E003136EF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3HG9ZBM8AV;
 				ENABLE_HARDENED_RUNTIME = YES;
 				LIBRARY_SEARCH_PATHS = (
-					/usr/local/include,
 					/usr/local/lib,
+					/usr/local/include,
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -283,25 +283,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0B6C8CCB25517F7D002D5395 /* Build configuration list for PBXProject "BDD" */ = {
+		0B0D40AB2552D04E003136EF /* Build configuration list for PBXProject "Einstein's problem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B6C8CD525517F7D002D5395 /* Debug */,
-				0B6C8CD625517F7D002D5395 /* Release */,
+				0B0D40B52552D04E003136EF /* Debug */,
+				0B0D40B62552D04E003136EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0B6C8CD725517F7D002D5395 /* Build configuration list for PBXNativeTarget "BDD" */ = {
+		0B0D40B72552D04E003136EF /* Build configuration list for PBXNativeTarget "Einstein's problem" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0B6C8CD825517F7D002D5395 /* Debug */,
-				0B6C8CD925517F7D002D5395 /* Release */,
+				0B0D40B82552D04E003136EF /* Debug */,
+				0B0D40B92552D04E003136EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0B6C8CC825517F7D002D5395 /* Project object */;
+	rootObject = 0B0D40A82552D04E003136EF /* Project object */;
 }
