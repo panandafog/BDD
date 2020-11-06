@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0B0D40B42552D04E003136EF /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B0D40B32552D04E003136EF /* main.cpp */; };
-		0B0D40BF2552D0E9003136EF /* bdd.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0D40BD2552D0E9003136EF /* bdd.h */; };
-		0B0D40C02552D0E9003136EF /* libbdd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0D40BE2552D0E9003136EF /* libbdd.a */; };
+		0B2B35CA25555B17007F9F97 /* bdd.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2B35C825555B17007F9F97 /* bdd.h */; };
+		0B2B35CB25555B17007F9F97 /* libbdd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2B35C925555B17007F9F97 /* libbdd.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -29,6 +29,8 @@
 		0B0D40B32552D04E003136EF /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0B0D40BD2552D0E9003136EF /* bdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bdd.h; path = ../../../../../usr/local/lib/bdd.h; sourceTree = "<group>"; };
 		0B0D40BE2552D0E9003136EF /* libbdd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbdd.a; path = ../../../../../usr/local/lib/libbdd.a; sourceTree = "<group>"; };
+		0B2B35C825555B17007F9F97 /* bdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bdd.h; path = ../../../../../../usr/local/lib/bdd.h; sourceTree = "<group>"; };
+		0B2B35C925555B17007F9F97 /* libbdd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbdd.a; path = ../../../../../../usr/local/lib/libbdd.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,8 +38,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B0D40BF2552D0E9003136EF /* bdd.h in Frameworks */,
-				0B0D40C02552D0E9003136EF /* libbdd.a in Frameworks */,
+				0B2B35CA25555B17007F9F97 /* bdd.h in Frameworks */,
+				0B2B35CB25555B17007F9F97 /* libbdd.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,6 +74,8 @@
 		0B0D40BC2552D0E9003136EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0B2B35C825555B17007F9F97 /* bdd.h */,
+				0B2B35C925555B17007F9F97 /* libbdd.a */,
 				0B0D40BD2552D0E9003136EF /* bdd.h */,
 				0B0D40BE2552D0E9003136EF /* libbdd.a */,
 			);

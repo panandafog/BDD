@@ -14,7 +14,7 @@ using namespace std;
 
 ofstream out;
 
-string dotDir = "/Users/panandafog/Soft/С++/Dot/";
+string dotDir = "/Users/panandafog/Soft/С++/matlogic/Dot/";
 
 void fun(char* varset, int size); // см. далее
 

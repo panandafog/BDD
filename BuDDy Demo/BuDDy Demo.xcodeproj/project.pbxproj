@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B0D40A32552CF6A003136EF /* bdd.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0D40A02552CF18003136EF /* bdd.h */; };
-		0B0D40A42552CF6A003136EF /* libbdd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B0D40A12552CF18003136EF /* libbdd.a */; };
+		0B2B35D025559D2C007F9F97 /* libbdd.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2B35CE25559D2C007F9F97 /* libbdd.a */; };
+		0B2B35D125559D2C007F9F97 /* bdd.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B2B35CF25559D2C007F9F97 /* bdd.h */; };
 		0B342CB52552CE3B00904762 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0B342CB42552CE3B00904762 /* main.cpp */; };
 /* End PBXBuildFile section */
 
@@ -25,8 +25,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		0B0D40A02552CF18003136EF /* bdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bdd.h; path = ../../../../../usr/local/lib/bdd.h; sourceTree = "<group>"; };
-		0B0D40A12552CF18003136EF /* libbdd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbdd.a; path = ../../../../../usr/local/lib/libbdd.a; sourceTree = "<group>"; };
+		0B2B35CE25559D2C007F9F97 /* libbdd.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libbdd.a; path = ../../../../../../usr/local/lib/libbdd.a; sourceTree = "<group>"; };
+		0B2B35CF25559D2C007F9F97 /* bdd.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = bdd.h; path = ../../../../../../usr/local/lib/bdd.h; sourceTree = "<group>"; };
 		0B342CB12552CE3B00904762 /* BuDDy Demo */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "BuDDy Demo"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B342CB42552CE3B00904762 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -36,8 +36,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0B0D40A32552CF6A003136EF /* bdd.h in Frameworks */,
-				0B0D40A42552CF6A003136EF /* libbdd.a in Frameworks */,
+				0B2B35D025559D2C007F9F97 /* libbdd.a in Frameworks */,
+				0B2B35D125559D2C007F9F97 /* bdd.h in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,8 +47,8 @@
 		0B0D409F2552CF18003136EF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				0B0D40A02552CF18003136EF /* bdd.h */,
-				0B0D40A12552CF18003136EF /* libbdd.a */,
+				0B2B35CF25559D2C007F9F97 /* bdd.h */,
+				0B2B35CE25559D2C007F9F97 /* libbdd.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
