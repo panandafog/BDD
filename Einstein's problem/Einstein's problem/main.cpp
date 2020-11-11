@@ -19,7 +19,7 @@ using namespace std;
 #define M 4 // число свойств
 #define LOG_N 4
 
-#define K 36 // максимальная сумма значений свойств соседей (для 7-го ограничения)
+#define K 26 // максимальная сумма значений свойств соседей (для 7-го ограничения)
 
 const int N_VAR = N * M * LOG_N;
 
@@ -32,7 +32,7 @@ void fun(char* varset, int size);
 int main(int argc, const char * argv[]) {
     
     // инициализация
-    bdd_init(100000000, 10000000);
+    bdd_init(300000000, 10000000);
     
     bdd_setvarnum(N_VAR);
     
@@ -71,99 +71,93 @@ int main(int argc, const char * argv[]) {
     // 3 1-го типа, 4 2-го, 5 3-го, 4 4-го
     
     if (LOG) { cout << endl << "начал вводить ограничение 1" << endl; }
+    
     // ограничения типа 1
     
-    task &= p1[1][1];
-    task &= p1[2][2];
+    task &= p1[1][4];
+    task &= p1[2][3];
     task &= p2[0][8];
     
-    task &= p1[0][0];
-    task &= p3[0][1];
-    task &= p4[0][0];
-    
-    task &= p2[1][7];
-    task &= p3[1][2];
-    
-    task &= p2[2][6];
-    
-    task &= p1[3][3];
-    task &= p2[3][5];
-    
-    task &= p2[4][4];
-    
-    task &= p1[6][6];
-    task &= p4[6][3];
-    
     task &= p1[7][7];
-    task &= p4[7][2];
-    
-    task &= p1[8][8];
-    task &= p4[8][1];
-    
-//    task &= p1[7][7];
-//    task &= p4[8][1];
-//    task &= p4[0][0];
+    task &= p4[8][3];
+    task &= p4[0][6];
+    task &= p4[6][5];
+    task &= p2[3][0];
     
     if (LOG) {
         cout << "satcount с ограничением 1: " << bdd_satcount(task) << endl;
         cout << endl << "начал вводить ограничения 2" << endl;
     }
+    
     // ограничения типа 2
     
     for (unsigned i = 0; i < N; i++)
     {
-        task &= (p2[i][3] & p3[i][6]) | (!p2[i][3] & !p3[i][6]);
-        task &= (p2[i][2] & p3[i][7]) | (!p2[i][2] & !p3[i][7]);
-        task &= (p2[i][1] & p3[i][8]) | (!p2[i][1] & !p3[i][8]);
-        task &= (p2[i][0] & p3[i][0]) | (!p2[i][0] & !p3[i][0]);
+        task &= (p2[i][2] & p3[i][1]) | (!p2[i][2] & !p3[i][1]);
+        task &= (p2[i][3] & p3[i][8]) | (!p2[i][3] & !p3[i][8]);
+        task &= (p2[i][4] & p3[i][7]) | (!p2[i][4] & !p3[i][7]);
+        task &= (p2[i][5] & p3[i][6]) | (!p2[i][5] & !p3[i][6]);
         
-        task &= (p3[i][4] & p1[i][3]) | (!p3[i][4] & !p1[i][3]);
+        task &= (p3[i][2] & p1[i][2]) | (!p3[i][2] & !p1[i][2]);
+        task &= (p3[i][4] & p4[i][7]) | (!p3[i][4] & !p4[i][7]);
+        task &= (p1[i][1] & p2[i][1]) | (!p1[i][1] & !p2[i][1]);
+        task &= (p1[i][5] & p3[i][3]) | (!p1[i][5] & !p3[i][3]);
+        task &= (p2[i][6] & p4[i][8]) | (!p2[i][6] & !p4[i][8]);
     }
     
     if (LOG) {
         cout << "satcount с ограничениями 2: " << bdd_satcount(task) << endl;
         cout << endl << "начал вводить ограничения 3, 4" << endl;
     }
+    
     for (unsigned i = 0; i < N - 3; i++)
     {
         unsigned j = i + 3;
         
         // ограничения типа 3
         
-        task &= (p4[i][6] & p3[j][7]) | (!p4[i][6] & !p3[j][7]);
-        task &= !p3[0][7] & !p3[1][7] & !p3[2][7] & !p4[N - 3][6] & !p4[N - 2][6] & !p4[N - 3][6];
+        task &= !(p4[i][0] ^ p3[j][8]);
+        task &= !p3[0][8] & !p3[1][8] & !p3[2][8] & !p4[N - 3][0] & !p4[N - 2][0] & !p4[N - 3][0];
         
-        task &= (p4[i][5] & p3[j][8]) | (!p4[i][5] & !p3[j][8]);
-        task &= !p3[0][8] & !p3[1][8] & !p3[2][8] & !p4[N - 3][5] & !p4[N - 2][5] & !p4[N - 3][5];
+        task &= !(p4[i][2] ^ p3[j][7]);
+        task &= !p3[0][7] & !p3[1][7] & !p3[2][7] & !p4[N - 3][2] & !p4[N - 2][2] & !p4[N - 3][2];
         
-        task &= (p4[i][4] & p3[j][0]) | (!p4[i][4] & !p3[j][0]);
-        task &= !p3[0][0] & !p3[1][0] & !p3[2][0] & !p4[N - 3][4] & !p4[N - 2][4] & !p4[N - 3][4];
+        task &= !(p4[i][1] ^ p3[j][6]);
+        task &= !p3[0][6] & !p3[1][6] & !p3[2][6] & !p4[N - 3][1] & !p4[N - 2][1] & !p4[N - 3][1];
         
-        task &= (p4[i][8] & p1[j][4]) | (!p4[i][8] & !p1[j][4]);
-        task &= !p1[0][4] & !p1[1][4] & !p1[2][4] & !p4[N - 3][8] & !p4[N - 2][8] & !p4[N - 3][8];
+        task &= !(p4[i][7] ^ p1[j][1]);
+        task &= !p1[0][1] & !p1[1][1] & !p1[2][1] & !p4[N - 3][7] & !p4[N - 2][7] & !p4[N - 3][7];
         
-        task &= (p4[i][7] & p1[j][5]) | (!p4[i][7] & !p1[j][5]);
-        task &= !p1[0][5] & !p1[1][5] & !p1[2][5] & !p4[N - 3][7] & !p4[N - 2][7] & !p4[N - 3][7];
+        task &= !(p4[i][8] ^ p1[j][0]);
+        task &= !p1[0][0] & !p1[1][0] & !p1[2][0] & !p4[N - 3][8] & !p4[N - 2][8] & !p4[N - 3][8];
+        
+        
+        task &= !(p3[i][3] ^ p2[j][0]);
+        task &= !p2[0][0] & !p2[1][0] & !p2[2][0] & !p3[N - 3][3] & !p3[N - 2][3] & !p3[N - 3][3];
+        
+        task &= !(p4[i][2] ^ p4[j][4]);
+        task &= !p4[0][4] & !p4[1][4] & !p4[2][4] & !p4[N - 3][2] & !p4[N - 2][2] & !p4[N - 3][2];
         
         // ограничения типа 4
         
-        task &= (p2[i][2] & p3[j][4]) | (!p2[i][2] & !p3[j][4]) |
-        (p2[j][2] & p3[i][4]) | (!p2[j][2] & !p3[i][4]);
+        task &= (!(p2[i][3] ^ p3[j][2]) & !p3[0][2] & !p3[1][2] & !p3[2][2] & !p2[N - 3][3] & !p2[N - 2][3] & !p2[N - 3][3]) |
+        (!(p3[i][2] ^ p2[j][3]) & !p2[0][3] & !p2[1][3] & !p2[2][3] & !p3[N - 3][2] & !p3[N - 2][2] & !p3[N - 3][2]);
         
-        task &= (p2[i][1] & p3[j][5]) | (!p2[i][1] & !p3[j][5]) |
-        (p2[j][1] & p3[i][5]) | (!p2[j][1] & !p3[i][5]);
+        task &= (!(p2[i][4] ^ p3[j][0]) & !p3[0][0] & !p3[1][0] & !p3[2][0] & !p2[N - 3][4] & !p2[N - 2][4] & !p2[N - 3][4]) |
+        (!(p3[i][0] ^ p2[j][4]) & !p2[0][4] & !p2[1][4] & !p2[2][4] & !p3[N - 3][0] & !p3[N - 2][0] & !p3[N - 3][0]);
         
-        task &= (p2[i][0] & p3[j][6]) | (!p2[i][0] & !p3[j][6]) |
-        (p2[j][0] & p3[i][6]) | (!p2[j][0] & !p3[i][6]);
-        
-        task &= (p2[i][3] & p3[j][3]) | (!p2[i][3] & !p3[j][3]) |
-        (p2[j][3] & p3[i][3]) | (!p2[j][3] & !p3[i][3]);
+        task &= (!(p2[i][5] ^ p3[j][1]) & !p3[0][1] & !p3[1][1] & !p3[2][1] & !p2[N - 3][5] & !p2[N - 2][5] & !p2[N - 3][5]) |
+        (!(p3[i][1] ^ p2[j][5]) & !p2[0][5] & !p2[1][5] & !p2[2][5] & !p3[N - 3][1] & !p3[N - 2][1] & !p3[N - 3][1]);
+
+        task &= (!(p2[i][2] ^ p3[j][5])& !p3[0][5] & !p3[1][5] & !p3[2][5] & !p2[N - 3][2] & !p2[N - 2][2] & !p2[N - 3][2]) |
+        (!(p3[i][5] ^ p2[j][2]) & !p2[0][2] & !p2[1][2] & !p2[2][2] & !p3[N - 3][5] & !p3[N - 2][5] & !p3[N - 3][5]);
     }
     
     if (LOG) {
         cout << "satcount с ограничениями 3, 4: " << bdd_satcount(task) << endl;
         cout << endl << "начал вводить ограничение 6" << endl;
     }
+    
     // ограничение типа 6
     
     for (unsigned i = 0; i < N; i++)
@@ -188,6 +182,7 @@ int main(int argc, const char * argv[]) {
         cout << "satcount с ограничением 6: " << bdd_satcount(task) << endl;
         cout << endl << "начал вводить ограничение 5" << endl;
     }
+
     // ограничение типа 5
     
     for (unsigned i1 = 0; i1 < N; i1++)
@@ -196,7 +191,6 @@ int main(int argc, const char * argv[]) {
         {
             for (unsigned j = 0; j < N; j++)
             {
-                if (LOG) { cout << "   " << "i1: " << i1 << ", i2: " << i2 << ", j: " << j << endl; }
                 if (i1 != i2) {
                     task &= !p1[i1][j] | !p1[i2][j];
                     task &= !p2[i1][j] | !p2[i2][j];
@@ -211,11 +205,21 @@ int main(int argc, const char * argv[]) {
         cout << "satcount с ограничением 5: " << bdd_satcount(task) << endl;
         cout << endl << "начал вводить ограничение 7" << endl;
     }
+    
+    if (LOG) {
+        out.open(dotDir + "out5.txt");
+        out << bdd_satcount(task) << " solutions:\n" << endl;
+        bdd_allsat(task, fun);
+        out.close();
+    }
+    
     // ограничение типа 7
     
     for (unsigned i = 0; i < N - 3; i++)
     {
         unsigned j = i + 3;
+        
+        bdd temp = bdd_false();
 
         if (LOG) { cout << "   " << "i: " << i << ", j: " << j << endl; }
 
@@ -237,9 +241,13 @@ int main(int argc, const char * argv[]) {
                                     {
                                         unsigned sum = rhsJ1 + rhsJ2 + rhsJ3 + rhsJ4 + lhsJ1 + lhsJ2 + lhsJ3 + lhsJ4;
 
-                                        if (sum > K) {
-                                            task &= !(p1[i][lhsJ1] & p2[i][lhsJ2] & p3[i][lhsJ3] & p4[i][lhsJ4] &
-                                                      p1[j][rhsJ1] & p2[j][rhsJ2] & p3[j][rhsJ3] & p4[j][rhsJ4]);
+//                                        if (sum > K) {
+//                                            task &= !(p1[i][lhsJ1] & p2[i][lhsJ2] & p3[i][lhsJ3] & p4[i][lhsJ4] &
+//                                                      p1[j][rhsJ1] & p2[j][rhsJ2] & p3[j][rhsJ3] & p4[j][rhsJ4]);
+//                                        }
+                                        if (sum <= K) {
+                                            temp |= (p1[i][lhsJ1] & p2[i][lhsJ2] & p3[i][lhsJ3] & p4[i][lhsJ4] &
+                                                     p1[j][rhsJ1] & p2[j][rhsJ2] & p3[j][rhsJ3] & p4[j][rhsJ4]);
                                         }
                                     }
                                 }
@@ -249,11 +257,9 @@ int main(int argc, const char * argv[]) {
                 }
             }
         }
+        
+        task &= temp;
     }
-    
-    //    out.open(dotDir + "bdd1.txt");
-    
-    //    out.close()
     
     // вывод результатов
     out.open(dotDir + "out.txt");
@@ -261,10 +267,6 @@ int main(int argc, const char * argv[]) {
     out << bdd_satcount(task) << " solutions:\n" << endl;
     bdd_allsat(task, fun);
     out.close();
-    
-//    out.open(dotDir + "Table.txt");
-//    out << bddtable << task << endl;
-//    out.close();
     
     bdd_done(); // завершение работы библиотеки
     
